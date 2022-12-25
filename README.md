@@ -21,7 +21,7 @@ spec:
         image: myregistry/number-guesser:latest
         ports:
         - containerPort: 8080
-        ```
+```
 
 This deployment configuration will create two replicas of the number-guesser container, each running the latest version of the myregistry/number-guesser image. The container will listen on port 8080.
 
