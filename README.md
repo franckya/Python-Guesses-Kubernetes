@@ -39,9 +39,8 @@ RUN pip install -r requirements.txt
 
 EXPOSE 8080
 
-CMD ["python", "guesser.py"]
+CMD ["python", "guesser.py"] ``
 
-``
 
 This Dockerfile will start from the official Python 3.8 image, copy the files from the current directory into the /app directory in the container, install the dependencies specified in the requirements.txt file, and expose port 8080. The CMD command specifies the command to run when the container starts.
 
