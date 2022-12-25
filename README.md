@@ -3,14 +3,14 @@ To deploy a Python application that guesses numbers on Kubernetes, you will need
 Here is an example of a Kubernetes deployment configuration file for a Python application that guesses numbers:
 
 ``
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: number-guesser
-spec:
-  replicas: 2
-  selector:
-    matchLabels:
+apiVersion: apps/v1 ``
+``kind: Deployment``
+``metadata:``
+ `` name: number-guesser``
+``spec:``
+  ``replicas: 2``
+  ``selector:``
+   `` matchLabels:``
       app: number-guesser
   template:
     metadata:
