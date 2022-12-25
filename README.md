@@ -28,7 +28,7 @@ This deployment configuration will create two replicas of the number-guesser con
 To create the container image for your application, you will need to package your Python code and any dependencies into a Docker image. You can then push the image to a container registry, such as Docker Hub or Google Container Registry, and reference it in the deployment configuration file.
 
 Here is an example of a Dockerfile that you can use to build a container image for a Python application that guesses numbers:
-
+```
 FROM python:3.8
 
 COPY . /app
@@ -39,7 +39,7 @@ RUN pip install -r requirements.txt
 EXPOSE 8080
 
 CMD ["python", "guesser.py"]
-
+```
 
 This Dockerfile will start from the official Python 3.8 image, copy the files from the current directory into the /app directory in the container, install the dependencies specified in the requirements.txt file, and expose port 8080. The CMD command specifies the command to run when the container starts.
 
