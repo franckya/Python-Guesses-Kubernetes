@@ -1,16 +1,15 @@
 To deploy a Python application that guesses numbers on Kubernetes, you will need to create a container image for your application and then use a Kubernetes deployment to manage the running instances of the container.
 
 Here is an example of a Kubernetes deployment configuration file for a Python application that guesses numbers:
-
-``
-apiVersion: apps/v1 ``
-``kind: Deployment``
-``metadata:``
- `` name: number-guesser``
-``spec:``
-  ``replicas: 2``
-  ``selector:``
-   `` matchLabels:``
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: number-guesser
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
       app: number-guesser
   template:
     metadata:
@@ -22,7 +21,7 @@ apiVersion: apps/v1 ``
         image: myregistry/number-guesser:latest
         ports:
         - containerPort: 8080
-        ``
+        ```
 
 This deployment configuration will create two replicas of the number-guesser container, each running the latest version of the myregistry/number-guesser image. The container will listen on port 8080.
 
